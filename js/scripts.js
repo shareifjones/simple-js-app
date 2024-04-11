@@ -1,15 +1,12 @@
-alert('Hello World');
+let pokemonList = [
+    {name: "Charizard",
+    height: 2,
+    types: ["fire", "flying"]},
+    {name: "Mewtwo",
+    height: 2,
+    types: "psychic"},
+    {name: "Pikachu",
+    height: 1,
+    types: "electric"}
+];
 
-let favoriteFood = 'Pizza';
-document.write(favoriteFood)
-
-let myName = 'Bob';
-document.write(myName);
-
-let simpleAddition = 2 + 2;
-document.write(simpleAddition);
-
-let size = 100;
-let doubleSize = size * 2;
-let minSize = (doubleSize * 2) - (size / 2);
-document.write(minSize);
