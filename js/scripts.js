@@ -1,12 +1,12 @@
 let pokemonList = [
     {name: "Charizard",
-    height: 2,
+    height: 1.7,
     types: ["fire", "flying"]},
     {name: "Mewtwo",
     height: 2,
     types: "psychic"},
     {name: "Pikachu",
-    height: 1,
+    height: 0.4,
     types: "electric"}
 ];
 
