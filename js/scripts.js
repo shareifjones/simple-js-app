@@ -16,9 +16,25 @@ let pokemonList = [
 }
 ];
 
-for (let i = 0; i < pokemonList.length; i++){
-document.write ("<p>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height + ")");
-if (pokemonList[i].height >= 2)
-document.write ("-Wow, thats big!" + "</p>")
-}
+pokemonList.forEach(function(pokemon) {
+    document.write ("<p>" + pokemon.name + " " + "(height: " + pokemon.height + ")");
+    if (pokemon.height >= 2)
+    document.write (" Wow, thats big!" + "</p>")
+});
 
+let pokemonRepository = (function () {
+    let pokemonList = [];
+  
+    function add(pokemon) {
+      pokemonList.push(pokemon);
+    }
+  
+    function getAll() {
+      return pokemonList;
+    }
+  
+    return {
+      add: add,
+      getAll: getAll
+    };
+  })();
