@@ -49,7 +49,7 @@ function add(pokemon) {
     };
   })();
 
-pokemonRepository.add({ name: "Charizard", height: 1.7, types: ["fire", "flying"] });
+pokemonRepository.add({ name: "Onyx", height: 8.8, types: ["rock", "ground"] });
 
 console.log(pokemonRepository.getAll());
 
