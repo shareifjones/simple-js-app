@@ -123,7 +123,7 @@ function showDetails(pokemon) {
       showDetails: showDetails
     };
 
-pokemonRepository.loadList().then(() => {
+pokemonRepository.loadList().then(function() => {
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon);
   });
