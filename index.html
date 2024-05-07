@@ -5,11 +5,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
-        <title>Simple JS App</title>
+        <title>POKEDEX App</title>
+        <link rel="icon" href="img/pokeball2.png">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Pokedex</a>
+            <a class="navbar-brand" href="index.html">
+                <img src = "img/pokeball2.png" alt="Pokeball" width="35px" height="35px" class="d-inline-block align-text-center"> 
+                POKEDEX
+               </a> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,10 +25,11 @@
           </nav>
 
        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pokemonModal">
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pokemonModal">
     Launch demo modal
-  </button>
-  
+  </button> -->
+
+  <ul class="pokemon-list list-group"></ul>
   <!-- Modal -->
   <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
