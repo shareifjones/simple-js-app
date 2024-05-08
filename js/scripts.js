@@ -32,7 +32,7 @@ function showModal (pokemon) {
  imageElement.src = pokemon.imageUrl;
 
  let typesElement = document.createElement('p');
- typesElement.innerText = "Types: " + pokemon.types;
+ typesElement.innerText = "Type: " + pokemon.types[0].type.name;
 
  modalTitle.appendChild(nameElement);
  modalBody.appendChild(heightElement);
