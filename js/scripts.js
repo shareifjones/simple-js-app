@@ -2,6 +2,9 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function() {
@@ -19,20 +22,20 @@ function showModal (pokemon) {
  modalBody.innerText = '';
 
  let nameElement = document.createElement('h1');
- nameElement.innerText = pokemon.name;
+ nameElement.innerText = (capitalizeFirstLetter(pokemon.name));
 
  let heightElement = document.createElement('p');
- heightElement.innerText = "Height: " + pokemon.height;
+ heightElement.innerText = "Height: " + pokemon.height + " m";
 
  let weightElement = document.createElement('p');
- weightElement.innerText = "Weight: " + pokemon.weight;
+ weightElement.innerText = "Weight: " + pokemon.weight + " kg";
 
  let imageElement = document.createElement('img');
  imageElement.classList.add('modal-image');
  imageElement.src = pokemon.imageUrl;
 
  let typesElement = document.createElement('p');
- typesElement.innerText = "Type: " + pokemon.types[0].type.name;
+ typesElement.innerText = "Type: " + (capitalizeFirstLetter(pokemon.types[0].type.name));
 
  modalTitle.appendChild(nameElement);
  modalBody.appendChild(heightElement);
@@ -48,7 +51,7 @@ function addListItem(pokemon){
   let listItem = document.createElement('li');
   let button = document.createElement('button');
   listItem.classList.add('group-list-item');
-  button.innerText = pokemon.name;
+  button.innerText = (capitalizeFirstLetter(pokemon.name));
   button.classList.add('pokemon-btn', 'btn');
   button.setAttribute('data-toggle', 'modal');
   button.setAttribute('data-target', '#pokemonModal');
@@ -99,6 +102,7 @@ function loadDetails(item) {
     console.error(e);
   });
 }
+
 
     return {
       add: add,
