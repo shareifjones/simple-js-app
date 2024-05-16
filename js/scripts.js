@@ -7,6 +7,7 @@ let pokemonRepository = (function () {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+ // function to show Pokemon details in modal
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function() {
       showModal(pokemon);
@@ -45,7 +46,7 @@ function showModal (pokemon) {
  modalBody.appendChild(typesElement);
 }
 
-
+  // function to add a list item for a Pokemon
 function addListItem(pokemon){
 
   let pokemonList = document.querySelector('.pokemon-list');
@@ -67,11 +68,12 @@ function add(pokemon) {
   pokemonList.push(pokemon);
 }
 
-
+  // function to get all Pokemon in the repository
 function getAll() {
   return pokemonList;
 }
 
+  //function to load pokemon from API
 function loadList() {
   return fetch(apiUrl)
   .then(function (response) {
@@ -90,6 +92,7 @@ function loadList() {
   })
 }
 
+// function to load details of pokemon
 function loadDetails(item) {
   let url = item.detailsUrl;
   return fetch(url).then(function (response) {
