@@ -50,7 +50,7 @@ function addListItem(pokemon){
   let pokemonList = document.querySelector('.pokemon-list');
   let listItem = document.createElement('li');
   let button = document.createElement('button');
-  listItem.classList.add('group-list-item');
+  listItem.classList.add('col-lg-4', 'col-md-6', 'col-sm-9', 'col-sx-12');
   button.innerText = (capitalizeFirstLetter(pokemon.name));
   button.classList.add('pokemon-btn', 'btn');
   button.setAttribute('data-toggle', 'modal');
