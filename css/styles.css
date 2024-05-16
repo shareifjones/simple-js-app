@@ -1,8 +1,8 @@
 
 .pokemon-btn {
-  background-color: grey;
+  background-color: #EE8329;
   border: none;
-  color: white;
+  color: black;
   display: flex;
   margin: 4px auto;
   padding: 16px 32px;
@@ -16,7 +16,7 @@
 }
 
 .pokemon-btn:hover {
-  background-color: lightgray;
+  background-color: #C4A484;
   color: white;
   cursor: pointer;
 }
@@ -28,3 +28,6 @@
   margin: 0 auto;
 }
 
+.modal-body, .modal-header, .modal-footer {
+  background-color: lightgray;
+}
